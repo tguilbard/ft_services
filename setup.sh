@@ -12,7 +12,7 @@ ft_set_service()
 }
 
 #a modifier
-minikube start
+minikube --vm-driver=docker start --extra-config=apiserver.service-node-port-range=1-35000
 
 # ======================================================
 
@@ -23,3 +23,5 @@ kubectl apply -f srcs/load_balancer/deployement-metallb.yaml
 
 # ======================================================
 ft_set_service
+
+minikube addons enable dashboard
