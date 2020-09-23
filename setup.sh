@@ -1,6 +1,6 @@
 #!/bin/bash
 
-services="nginx ftps wordpress phpmyadmin mysql influxdb grafana"
+services="nginx" # ftps wordpress phpmyadmin mysql influxdb grafana"
 
 ft_set_service()
 {
@@ -11,4 +11,15 @@ ft_set_service()
 	done
 }
 
+#a modifier
+minikube start
+
+# ======================================================
+
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.3/manifests/namespace.yaml
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.3/manifests/metallb.yaml
+kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"
+kubectl apply -f srcs/load_balancer/deployement-metallb.yaml
+
+# ======================================================
 ft_set_service
