@@ -12,7 +12,14 @@ ft_set_service()
 }
 
 #a modifier
-minikube --vm-driver=docker start --extra-config=apiserver.service-node-port-range=1-35000
+minikube start --vm-driver=docker --cpus=4 --memory=4400 --disk-size=5000MB --extra-config=apiserver.service-node-port-range=1-35000
+if [[ $? == 0 ]]
+then
+	eval $(minikube docker-env)
+else
+	minikube delete
+	exit
+fi
 
 # ======================================================
 
