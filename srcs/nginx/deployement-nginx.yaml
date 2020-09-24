@@ -16,7 +16,17 @@ spec:
         image: image-nginx
         ports:
         - containerPort: 80
+          name: http
         - containerPort: 443
+          name: https
+        - containerPort: 22
+          name: ssl
+        imagePullPolicy: IfNotPresent
+        env: 
+        - name: SSH_USER
+          value: admin
+        - name: SSH_PASSWORD
+          value: admin
 
 ---
 apiVersion: v1
@@ -28,7 +38,15 @@ spec:
   selector:
     app: nginx
   ports:
-  - port: 80
-    name: http
-  - port: 443
-    name: https
+  - name: http
+    port: 80
+    targetPort: 80
+    protocol: TCP
+  - name: https
+    port: 443
+    targetPort: 443
+    protocol: TCP
+  - name: ssl
+    port: 22
+    targetPort: 22
+    protocol: TCP

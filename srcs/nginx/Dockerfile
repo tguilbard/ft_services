@@ -1,31 +1,26 @@
 FROM alpine:latest
 
-# Installing phase
-RUN apk update
-RUN apk add openssl
-RUN apk add nginx
+# Install nginx and its dependencies
+RUN apk update && apk add openrc \
+&& apk add openssl openssh nginx
 
-RUN adduser -D -g 'www' www
-
+#RUN NGINX
 RUN mkdir -p /www
-RUN chown -R www:www /var/lib/nginx
-RUN chown -R www:www /www
-RUN mkdir -p /run/nginx
+COPY ./index.html /www/index.html
 
-# Config file and webpage
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY index.html /www/index.html
+# Create the file with the ssl key inside
+RUN mkdir -p /etc/nginx/ssl && openssl req -newkey rsa:2048 -x509 -days 365 -nodes -keyout /etc/nginx/ssl/ft_services.key -out /etc/nginx/ssl/ft_services.pem -subj "/C=FR/ST=Paris/L=Paris/O=42, Inc./OU=IT/CN=ft_services"
 
-# SSL manager
+RUN	usr/bin/ssh-keygen -A 
+COPY	sshd_config /etc/ssh/
 
-RUN adduser -D user
-RUN echo "user:password" | chpasswd
-RUN yes "" | openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/ft_services.key -out /etc/ssl/certs/ft_services.crt
+# Nginnx config
+RUN rm /etc/nginx/nginx.conf
+COPY ./nginx.conf /etc/nginx/nginx.conf
 
-#COPY start.sh ./start.sh
-#RUN chmod +x /start.sh
-#CMD sh ./start.sh
-#RUN nginx -g 'daemon off;'
-EXPOSE 80
-EXPOSE 443
-EXPOSE 22
+COPY setup.sh .
+
+RUN chmod +x setup.sh
+
+EXPOSE 80 443 22
+CMD ./setup.sh

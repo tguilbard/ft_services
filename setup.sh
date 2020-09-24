@@ -7,12 +7,14 @@ ft_set_service()
 	for service in $services
 	do
 		echo "Building $service"
-		docker build -t image-$service srcs/$service && kubectl apply -f srcs/$service/deployement-$service.yaml
+		docker build -t image-$service srcs/$service
+	    kubectl apply -f srcs/$service/deployement-$service.yaml
 	done
 }
 
-#a modifier
-minikube start --vm-driver=docker --cpus=4 --memory=4400 --disk-size=5000MB --extra-config=apiserver.service-node-port-range=1-35000
+# ================================================================
+
+minikube start --driver=docker --cpus=4 --memory=4400 --extra-config=apiserver.service-node-port-range=1-35000
 if [[ $? == 0 ]]
 then
 	eval $(minikube docker-env)
@@ -31,4 +33,4 @@ kubectl apply -f srcs/load_balancer/deployement-metallb.yaml
 # ======================================================
 ft_set_service
 
-minikube addons enable dashboard
+minikube dashboard
