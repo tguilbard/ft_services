@@ -22,11 +22,6 @@ spec:
         - containerPort: 22
           name: ssh
         imagePullPolicy: IfNotPresent
-        env:
-        - name: SSH_USER
-          value: admin
-        - name: SSH_PASSWORD
-          value: admin
 
 ---
 apiVersion: v1
