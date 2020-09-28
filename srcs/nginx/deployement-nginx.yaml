@@ -20,9 +20,9 @@ spec:
         - containerPort: 443
           name: https
         - containerPort: 22
-          name: ssl
+          name: ssh
         imagePullPolicy: IfNotPresent
-        env: 
+        env:
         - name: SSH_USER
           value: admin
         - name: SSH_PASSWORD
@@ -46,7 +46,7 @@ spec:
     port: 443
     targetPort: 443
     protocol: TCP
-  - name: ssl
+  - name: ssh
     port: 22
     targetPort: 22
     protocol: TCP
