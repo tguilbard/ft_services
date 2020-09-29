@@ -1,6 +1,6 @@
 #!/bin/bash
 
-services="nginx" # ftps wordpress phpmyadmin mysql influxdb grafana"
+services="nginx phpmyadmin mysql" # | ftps wordpress | | influxdb grafana
 GREEN="\e[32m\e[1m"
 DEFAULT="\e[0m"
 ft_set_service()
