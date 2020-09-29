@@ -1,12 +1,10 @@
-#!/bin/sh
-
+# Nginx start
 openrc
 touch /run/openrc/softlevel
 service nginx start
-adduser -D user42
-echo "user42:user42" | chpasswd
+echo -e "user42\nuser42" | adduser user42
 rc-update add sshd
 rc-status
 /etc/init.d/sshd start
 
-tail -f /dev/null
+tail -f /dev/null # Freeze command to avoid end of container

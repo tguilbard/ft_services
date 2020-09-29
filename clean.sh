@@ -1,3 +1,3 @@
 #!/bin/bash
 
-minikube delete ; yes | docker system prune
+ yes | docker system prune; minikube delete
