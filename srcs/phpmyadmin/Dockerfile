@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk add openrc \
+RUN apk update \
 && apk add wget php7 php7-fpm \
 php7-opcache php7-gd php7-mysqli \
 php7-zlib php7-curl php7-mbstring \
@@ -11,11 +11,11 @@ RUN wget http://files.directadmin.com/services/all/phpMyAdmin/phpMyAdmin-5.0.2-a
 && rm phpMyAdmin-5.0.2-all-languages.tar.gz \
 && mkdir /www && mv phpMyAdmin-5.0.2-all-languages /www/phpmyadmin
 
-ADD setup.sh 			/srcs/setup.sh
+ADD setup.sh 			.
 ADD config.inc.php		/www/phpmyadmin
 
-RUN chmod +x /srcs/setup.sh
+RUN chmod +x setup.sh
 
 EXPOSE 5000
 
-CMD ["sh", "/srcs/setup.sh"]
+CMD ["sh", "setup.sh"]

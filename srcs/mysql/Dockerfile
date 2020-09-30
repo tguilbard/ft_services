@@ -3,9 +3,13 @@ FROM alpine:latest
 RUN apk update \
 && apk add mariadb mariadb-client openrc
 
-ADD setup.sh /srcs/setup.sh
-RUN chmod +x /srcs/setup.sh
+RUN mysql --version
+
+ADD setup.sh .
+ADD init.sh .
+RUN chmod +x setup.sh
+RUN chmod +x init.sh
 
 EXPOSE 3306
 
-CMD ["sh", "/srcs/setup.sh"]
+CMD ["sh", "init.sh"]

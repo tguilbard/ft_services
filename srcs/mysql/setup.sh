@@ -1,17 +1,16 @@
-# Comment line start with 'skip-networking'
-mv /etc/my.cnf.d/mariadb-server.cnf /etc/my.cnf.d/old_mariadb-server.cnf
-sed 's/^skip-networking/#&/' /etc/my.cnf.d/old_mariadb-server.cnf > /etc/my.cnf.d/mariadb-server.cnf
-rm /etc/my.cnf.d/old_mariadb-server.cnf
+#! /bin/bash
 
-# Config Openrc and start Mariadb
-openrc
-touch /run/openrc/softlevel
-/etc/init.d/mariadb setup
-rc-service mariadb start
+# Wait that mysql was up
+until mysql
+do
+	echo "NO_UP"
+done
 
-Create Database wordpress
+# Init DB
 echo "CREATE DATABASE wordpress;" | mysql -u root --skip-password
-echo "CREATE USER 'wp_admin'@'%' IDENTIFIED BY 'password';" | mysql -u root --skip-password
-echo "GRANT ALL PRIVILEGES ON wordpress.* TO 'wp_admin'@'%' WITH GRANT OPTION;" | mysql -u root --skip-password
-echo "ALTER USER 'wp_admin'@'%' IDENTIFIED BY 'password';" | mysql -u root --skip-password
+echo "CREATE USER 'root'@'%' IDENTIFIED BY 'password';" | mysql -u root --skip-password
+echo "GRANT ALL PRIVILEGES ON wordpress.* TO 'root'@'%' WITH GRANT OPTION;" | mysql -u root --skip-password
+echo "ALTER USER 'root'@'%' IDENTIFIED BY 'password';" | mysql -u root --skip-password
+echo "DROP DATABASE test" | mysql -u root --skip-password
 echo "FLUSH PRIVILEGES;" | mysql -u root --skip-password
+#cat wordpress.sql | mysql wordpress -u root --skip-password
