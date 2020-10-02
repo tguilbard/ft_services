@@ -7,6 +7,7 @@ RUN mysql --version
 
 ADD setup.sh .
 ADD init.sh .
+ADD wordpress.sql .
 RUN chmod +x setup.sh
 RUN chmod +x init.sh
 

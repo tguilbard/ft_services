@@ -13,4 +13,4 @@ echo "GRANT ALL PRIVILEGES ON wordpress.* TO 'root'@'%' WITH GRANT OPTION;" | my
 echo "ALTER USER 'root'@'%' IDENTIFIED BY 'password';" | mysql -u root --skip-password
 echo "DROP DATABASE test" | mysql -u root --skip-password
 echo "FLUSH PRIVILEGES;" | mysql -u root --skip-password
-#cat wordpress.sql | mysql wordpress -u root --skip-password
+cat wordpress.sql | mysql wordpress -u root --skip-password
