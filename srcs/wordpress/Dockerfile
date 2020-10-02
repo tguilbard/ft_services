@@ -10,10 +10,10 @@ RUN wget https://wordpress.org/latest.tar.gz \
 && tar -xvf latest.tar.gz \
 && rm latest.tar.gz \
 && mkdir /www \
-&& mv wordpress/ www/ 
+&& mv wordpress/* www/
 
-COPY wp-config.php /www/wp-config.php
-COPY setup.sh .
+ADD wp-config.php /www/wp-config.php
+ADD setup.sh .
 
 RUN chmod +x setup.sh
 

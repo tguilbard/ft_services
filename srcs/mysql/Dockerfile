@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update \
+RUN apk update && apk add --no-cache --upgrade bash \
 && apk add mariadb mariadb-client openrc
 
 RUN mysql --version

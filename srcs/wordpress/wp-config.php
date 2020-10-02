@@ -29,7 +29,7 @@ define( 'DB_NAME', 'wordpress' );
 	define( 'DB_PASSWORD', 'password' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'mysql' );
+define( 'DB_HOST', 'mysql-service' );
 
 define('FS_METHOD', 'direct');
 
