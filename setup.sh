@@ -1,6 +1,6 @@
 #!/bin/bash
 
-services="nginx ftps wordpress phpmyadmin mysql" # | | | | | influxdb grafana
+services="nginx ftps wordpress phpmyadmin mysql influxdb telegraf grafana"
 GREEN="\e[32m\e[1m"
 DEFAULT="\e[0m"
 ft_set_service()
@@ -16,7 +16,7 @@ ft_set_service()
 
 # ================================================================
 
-echo -en "\e[35m"; minikube start --driver=docker --cpus=4 --memory=4400 --extra-config=apiserver.service-node-port-range=1-35000
+echo -en "\e[35m"; minikube start --driver=docker --cpus=2 --memory=2200 --extra-config=apiserver.service-node-port-range=1-35000
 if [[ $? == 0 ]]
 then
 	eval $(minikube docker-env)
