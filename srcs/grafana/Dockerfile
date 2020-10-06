@@ -1,17 +1,20 @@
 FROM alpine:latest
 
-RUN apk add openrc
+RUN	wget -P /tmp/  https://dl.grafana.com/oss/release/grafana-6.7.1.linux-amd64.tar.gz ; \
+	tar -zxvf /tmp/grafana-6.7.1.linux-amd64.tar.gz 
 
-RUN wget https://dl.grafana.com/oss/release/grafana-7.1.5.linux-amd64.tar.gz \
-&& tar -zxf grafana-7.1.5.linux-amd64.tar.gz \
-&& mv grafana-7.1.5 grafana \
-&& rm -r grafana-7.1.5.linux-amd64.tar.gz
+RUN	set -ex ; \
+	addgroup -S grafana ; \
+	adduser -S -G grafana grafana ; \
+	apk add --no-cache libc6-compat ca-certificates su-exec bash ; \
+	apk add openrc
 
-RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
+COPY	grafana.db /grafana-6.7.1/data/
 
-ADD setup.sh /srcs/setup.sh
-RUN chmod +x /srcs/setup.sh
+COPY	setup.sh .
 
-EXPOSE 3000
+RUN	chmod 775 setup.sh
 
-CMD ["sh", "/srcs/setup.sh"]
+EXPOSE	3000
+
+CMD ["sh", "setup.sh"]

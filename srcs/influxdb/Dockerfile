@@ -1,9 +1,8 @@
 FROM alpine:latest
 
-RUN apk add openrc influxdb
-
-ADD setup.sh /srcs/setup.sh
+RUN apk add openrc influxdb \
+&& apk add ca-certificates
 
 EXPOSE 8086
 
-CMD ["sh", "/srcs/setup.sh"]
+CMD influxd run -config /etc/influxdb.conf
