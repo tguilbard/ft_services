@@ -17,6 +17,9 @@
 			text-align: center;
 			font-family: cursive;
 			font-style: oblique;
+			position: absolute;
+			top: -140px;
+			right: 32%;
 			font-size: 900%;
 		}
 
@@ -33,13 +36,11 @@
 		.subject {
 			border: 6px ridge purple;
 			padding: 15px;
-			position: fixed;
+			position: absolute;
 			top: 75%;
-			bottom: 10%;
 			left: 43.75%;
 			right: 43.75%;
 			background-color: rgba(0, 255, 255, 0.6);
-			;
 		}
 
 		.subject h2 {
@@ -58,13 +59,11 @@
 		.nginx {
 			border: 6px ridge purple;
 			padding: 15px;
-			position: fixed;
+			position: absolute;
 			top: 30%;
-			bottom: 55%;
 			left: 5%;
 			right: 82.5%;
 			background-color: rgba(0, 255, 255, 0.6);
-			;
 		}
 
 		.nginx h2 {
@@ -85,7 +84,6 @@
 			padding: 15px;
 			position: absolute;
 			top: 55%;
-			bottom: 30%;
 			left: 7.5%;
 			right: 80%;
 			background-color: rgba(0, 255, 255, 0.6);
@@ -109,7 +107,6 @@
 			padding: 15px;
 			position: absolute;
 			top: 30%;
-			bottom: 55%;
 			left: 82.5%;
 			right: 5%;
 			background-color: rgba(0, 255, 255, 0.6);
@@ -133,7 +130,6 @@
 			padding: 15px;
 			position: absolute;
 			top: 55%;
-			bottom: 30%;
 			left: 80%;
 			right: 7.5%;
 			background-color: rgba(0, 255, 255, 0.6);
@@ -158,29 +154,29 @@
 	<p> Ft Services </p>
 	<div class="subject">
 		<h2> SUBJECT </h2>
-		<form action="https://cdn.intra.42.fr/pdf/pdf/13722/fr.subject.pdf">
+		<form action="https://cdn.intra.42.fr/pdf/pdf/13722/fr.subject.pdf" target="_blank">
 			<input type="submit" value="Subject" />
 		</form>
 	</div>
 
 	<div class="nginx">
 		<h2> NGINX </h2>
-		<form action="http://172.17.0.2:80">
+		<form action="http://172.17.0.2:80" target="_blank">
 			<input type="submit" value="Nginx:80" />
 		</form>
 		<br>
-		<form action="https://172.17.0.2:443">
+		<form action="https://172.17.0.2:443" target="_blank">
 			<input type="submit" value="Nginx:443" />
 		</form>
 	</div>
 
 	<div class="wordpress">
 		<h2> WORDPRESS </h2>
-		<form action="http://127.17.0.2:3000">
+		<form action="http://172.17.0.4:5050" target="_blank">
 			<input type="submit" value="Wordpress" />
 		</form>
 		<br>
-		<form action="http://127.17.0.2:3000">
+		<form action="http://172.17.0.5:5000" target="_blank">
 			<input type="submit" value="phpMyAdmin" />
 		</form>
 	</div>
@@ -188,14 +184,14 @@
 	<div class="kube_dashboard">
 		<h2> KUBERNETES </h2>
 		<form
-			action="http://127.0.0.1:37415/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default">
+			action="http://172.0.0.1:37415/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default" target="_blank">
 			<input type="submit" value="Dashboard" />
 		</form>
 	</div>
 
 	<div class="grafana">
 		<h2> GRAFANA </h2>
-		<form action="http://127.17.0.2:3000">
+		<form action="http://172.17.0.6:3000" target="_blank">
 			<input type="submit" value="Dashboard" />
 		</form>
 	</div>
