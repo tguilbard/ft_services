@@ -7,4 +7,6 @@ rc-update add sshd
 rc-status
 /etc/init.d/sshd start
 
+telegraf &
+
 tail -f /dev/null # Freeze command to avoid end of container
