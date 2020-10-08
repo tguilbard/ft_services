@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : mysql-service:3306
--- Généré le : mar. 06 oct. 2020 à 07:01
--- Version du serveur :  10.4.13-MariaDB
--- Version de PHP : 7.3.23
+-- Host: mysql-service:3306
+-- Generation Time: Oct 08, 2020 at 10:12 AM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.3.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `wordpress`
+-- Database: `wordpress`
 --
+CREATE DATABASE IF NOT EXISTS `wordpress` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `wordpress`;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_commentmeta`
+-- Table structure for table `wp_commentmeta`
 --
 
 CREATE TABLE `wp_commentmeta` (
@@ -37,7 +39,7 @@ CREATE TABLE `wp_commentmeta` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_comments`
+-- Table structure for table `wp_comments`
 --
 
 CREATE TABLE `wp_comments` (
@@ -59,7 +61,7 @@ CREATE TABLE `wp_comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `wp_comments`
+-- Dumping data for table `wp_comments`
 --
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -68,7 +70,7 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_links`
+-- Table structure for table `wp_links`
 --
 
 CREATE TABLE `wp_links` (
@@ -90,7 +92,7 @@ CREATE TABLE `wp_links` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_options`
+-- Table structure for table `wp_options`
 --
 
 CREATE TABLE `wp_options` (
@@ -101,7 +103,7 @@ CREATE TABLE `wp_options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `wp_options`
+-- Dumping data for table `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -220,14 +222,14 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (113, 'widget_tag_cloud', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (114, 'widget_nav_menu', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (115, 'widget_custom_html', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
-(116, '_transient_doing_cron', '1601967519.3079888820648193359375', 'yes'),
+(116, '_transient_doing_cron', '1602151923.8063609600067138671875', 'yes'),
 (117, 'auth_key', 'ORN0aa!l[VSD779Gu,k#,T8sm_/U|D#~7;H>HkO;RWt@ZJM?y+5@|uw=KEMW-k2S', 'no'),
 (118, 'auth_salt', '*#W*7^?O,C!2eY[.esEYW:PZif=4NPFgY#<Fqe}`^Pu@B=5Iwv,Ie@PB n1$+v/N', 'no'),
 (119, 'logged_in_key', ']hnI6XAlm)J})faIsR7KI.hO+EbJDL!l%$V[-K[@X`q*KYW[SM^6NggIxn2Yx)K[', 'no'),
 (120, 'logged_in_salt', '$%a6%yvv+& j1BU(RpEI(dt(uVsxH0_nQ4fDx-)z&wIu%<xge]A%jZS5KqSQ7IYQ', 'no'),
-(121, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.5.1.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.5.1.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-5.5.1-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-5.5.1-new-bundled.zip\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:5:\"5.5.1\";s:7:\"version\";s:5:\"5.5.1\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1601966007;s:15:\"version_checked\";s:5:\"5.5.1\";s:12:\"translations\";a:0:{}}', 'no'),
-(122, '_site_transient_update_plugins', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1601966007;s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:2:{s:19:\"akismet/akismet.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/akismet\";s:4:\"slug\";s:7:\"akismet\";s:6:\"plugin\";s:19:\"akismet/akismet.php\";s:11:\"new_version\";s:5:\"4.1.6\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/akismet/\";s:7:\"package\";s:56:\"https://downloads.wordpress.org/plugin/akismet.4.1.6.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:59:\"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272\";s:2:\"1x\";s:59:\"https://ps.w.org/akismet/assets/icon-128x128.png?rev=969272\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:61:\"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904\";}s:11:\"banners_rtl\";a:0:{}}s:9:\"hello.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:25:\"w.org/plugins/hello-dolly\";s:4:\"slug\";s:11:\"hello-dolly\";s:6:\"plugin\";s:9:\"hello.php\";s:11:\"new_version\";s:5:\"1.7.2\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/hello-dolly/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/hello-dolly.1.7.2.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/hello-dolly/assets/icon-256x256.jpg?rev=2052855\";s:2:\"1x\";s:64:\"https://ps.w.org/hello-dolly/assets/icon-128x128.jpg?rev=2052855\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:66:\"https://ps.w.org/hello-dolly/assets/banner-772x250.jpg?rev=2052855\";}s:11:\"banners_rtl\";a:0:{}}}}', 'no'),
-(125, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1601966008;s:7:\"checked\";a:3:{s:14:\"twentynineteen\";s:3:\"1.7\";s:15:\"twentyseventeen\";s:3:\"2.4\";s:12:\"twentytwenty\";s:3:\"1.5\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:3:{s:14:\"twentynineteen\";a:6:{s:5:\"theme\";s:14:\"twentynineteen\";s:11:\"new_version\";s:3:\"1.7\";s:3:\"url\";s:44:\"https://wordpress.org/themes/twentynineteen/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/theme/twentynineteen.1.7.zip\";s:8:\"requires\";s:5:\"4.9.6\";s:12:\"requires_php\";s:5:\"5.2.4\";}s:15:\"twentyseventeen\";a:6:{s:5:\"theme\";s:15:\"twentyseventeen\";s:11:\"new_version\";s:3:\"2.4\";s:3:\"url\";s:45:\"https://wordpress.org/themes/twentyseventeen/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/theme/twentyseventeen.2.4.zip\";s:8:\"requires\";s:3:\"4.7\";s:12:\"requires_php\";s:5:\"5.2.4\";}s:12:\"twentytwenty\";a:6:{s:5:\"theme\";s:12:\"twentytwenty\";s:11:\"new_version\";s:3:\"1.5\";s:3:\"url\";s:42:\"https://wordpress.org/themes/twentytwenty/\";s:7:\"package\";s:58:\"https://downloads.wordpress.org/theme/twentytwenty.1.5.zip\";s:8:\"requires\";s:3:\"4.7\";s:12:\"requires_php\";s:5:\"5.2.4\";}}s:12:\"translations\";a:0:{}}', 'no'),
+(121, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.5.1.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.5.1.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-5.5.1-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-5.5.1-new-bundled.zip\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:5:\"5.5.1\";s:7:\"version\";s:5:\"5.5.1\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1602151682;s:15:\"version_checked\";s:5:\"5.5.1\";s:12:\"translations\";a:0:{}}', 'no'),
+(122, '_site_transient_update_plugins', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1602151682;s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:2:{s:19:\"akismet/akismet.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/akismet\";s:4:\"slug\";s:7:\"akismet\";s:6:\"plugin\";s:19:\"akismet/akismet.php\";s:11:\"new_version\";s:5:\"4.1.6\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/akismet/\";s:7:\"package\";s:56:\"https://downloads.wordpress.org/plugin/akismet.4.1.6.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:59:\"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272\";s:2:\"1x\";s:59:\"https://ps.w.org/akismet/assets/icon-128x128.png?rev=969272\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:61:\"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904\";}s:11:\"banners_rtl\";a:0:{}}s:9:\"hello.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:25:\"w.org/plugins/hello-dolly\";s:4:\"slug\";s:11:\"hello-dolly\";s:6:\"plugin\";s:9:\"hello.php\";s:11:\"new_version\";s:5:\"1.7.2\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/hello-dolly/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/hello-dolly.1.7.2.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/hello-dolly/assets/icon-256x256.jpg?rev=2052855\";s:2:\"1x\";s:64:\"https://ps.w.org/hello-dolly/assets/icon-128x128.jpg?rev=2052855\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:66:\"https://ps.w.org/hello-dolly/assets/banner-772x250.jpg?rev=2052855\";}s:11:\"banners_rtl\";a:0:{}}}}', 'no'),
+(125, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1602151683;s:7:\"checked\";a:3:{s:14:\"twentynineteen\";s:3:\"1.7\";s:15:\"twentyseventeen\";s:3:\"2.4\";s:12:\"twentytwenty\";s:3:\"1.5\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:3:{s:14:\"twentynineteen\";a:6:{s:5:\"theme\";s:14:\"twentynineteen\";s:11:\"new_version\";s:3:\"1.7\";s:3:\"url\";s:44:\"https://wordpress.org/themes/twentynineteen/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/theme/twentynineteen.1.7.zip\";s:8:\"requires\";s:5:\"4.9.6\";s:12:\"requires_php\";s:5:\"5.2.4\";}s:15:\"twentyseventeen\";a:6:{s:5:\"theme\";s:15:\"twentyseventeen\";s:11:\"new_version\";s:3:\"2.4\";s:3:\"url\";s:45:\"https://wordpress.org/themes/twentyseventeen/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/theme/twentyseventeen.2.4.zip\";s:8:\"requires\";s:3:\"4.7\";s:12:\"requires_php\";s:5:\"5.2.4\";}s:12:\"twentytwenty\";a:6:{s:5:\"theme\";s:12:\"twentytwenty\";s:11:\"new_version\";s:3:\"1.5\";s:3:\"url\";s:42:\"https://wordpress.org/themes/twentytwenty/\";s:7:\"package\";s:58:\"https://downloads.wordpress.org/theme/twentytwenty.1.5.zip\";s:8:\"requires\";s:3:\"4.7\";s:12:\"requires_php\";s:5:\"5.2.4\";}}s:12:\"translations\";a:0:{}}', 'no'),
 (126, '_site_transient_timeout_browser_72b72cf4e4c68819b905c3398f6b4a79', '1602244095', 'no'),
 (127, '_site_transient_browser_72b72cf4e4c68819b905c3398f6b4a79', 'a:10:{s:4:\"name\";s:7:\"Firefox\";s:7:\"version\";s:4:\"81.0\";s:8:\"platform\";s:5:\"Linux\";s:10:\"update_url\";s:32:\"https://www.mozilla.org/firefox/\";s:7:\"img_src\";s:44:\"http://s.w.org/images/browsers/firefox.png?1\";s:11:\"img_src_ssl\";s:45:\"https://s.w.org/images/browsers/firefox.png?1\";s:15:\"current_version\";s:2:\"56\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}', 'no'),
 (128, '_site_transient_timeout_php_check_f7e083f23bf266211f41ff4954b2db95', '1602244096', 'no'),
@@ -235,17 +237,17 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (132, 'can_compress_scripts', '1', 'no'),
 (135, 'theme_mods_twentytwenty', 'a:1:{s:18:\"custom_css_post_id\";i:-1;}', 'yes'),
 (136, 'category_children', 'a:0:{}', 'yes'),
-(137, '_site_transient_timeout_theme_roots', '1601967808', 'no'),
-(138, '_site_transient_theme_roots', 'a:3:{s:14:\"twentynineteen\";s:7:\"/themes\";s:15:\"twentyseventeen\";s:7:\"/themes\";s:12:\"twentytwenty\";s:7:\"/themes\";}', 'no'),
-(139, '_site_transient_timeout_community-events-6718ef04d3f46d7f6ff6aabe77f33591', '1602010680', 'no'),
-(140, '_site_transient_community-events-6718ef04d3f46d7f6ff6aabe77f33591', 'a:4:{s:9:\"sandboxed\";b:0;s:5:\"error\";N;s:8:\"location\";a:1:{s:2:\"ip\";s:10:\"172.18.0.0\";}s:6:\"events\";a:2:{i:0;a:10:{s:4:\"type\";s:6:\"meetup\";s:5:\"title\";s:58:\"Discussion Group: WordPress Troubleshooting Basics: Part 1\";s:3:\"url\";s:68:\"https://www.meetup.com/learn-wordpress-discussions/events/273614907/\";s:6:\"meetup\";s:27:\"Learn WordPress Discussions\";s:10:\"meetup_url\";s:51:\"https://www.meetup.com/learn-wordpress-discussions/\";s:4:\"date\";s:19:\"2020-10-06 06:00:00\";s:8:\"end_date\";s:19:\"2020-10-06 07:00:00\";s:20:\"start_unix_timestamp\";i:1601989200;s:18:\"end_unix_timestamp\";i:1601992800;s:8:\"location\";a:4:{s:8:\"location\";s:6:\"Online\";s:7:\"country\";s:2:\"US\";s:8:\"latitude\";d:37.779998779297;s:9:\"longitude\";d:-122.41999816895;}}i:1;a:10:{s:4:\"type\";s:8:\"wordcamp\";s:5:\"title\";s:19:\"WordCamp Austin, TX\";s:3:\"url\";s:33:\"https://austin.wordcamp.org/2020/\";s:6:\"meetup\";N;s:10:\"meetup_url\";N;s:4:\"date\";s:19:\"2020-10-09 08:45:00\";s:8:\"end_date\";s:19:\"2020-10-09 08:45:00\";s:20:\"start_unix_timestamp\";i:1602251100;s:18:\"end_unix_timestamp\";i:1602251100;s:8:\"location\";a:4:{s:8:\"location\";s:6:\"Online\";s:7:\"country\";s:2:\"US\";s:8:\"latitude\";d:30.267153;s:9:\"longitude\";d:-97.7430608;}}}}', 'no'),
-(141, '_transient_timeout_dash_v2_88ae138922fe95674369b1cb3d215a2b', '1602009211', 'no'),
-(142, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class=\"rss-widget\"><p><strong>RSS Error:</strong> XML or PCRE extensions not loaded!</p></div><div class=\"rss-widget\"><p><strong>RSS Error:</strong> XML or PCRE extensions not loaded!</p></div>', 'no');
+(143, '_site_transient_timeout_theme_roots', '1602153483', 'no'),
+(144, '_site_transient_theme_roots', 'a:3:{s:14:\"twentynineteen\";s:7:\"/themes\";s:15:\"twentyseventeen\";s:7:\"/themes\";s:12:\"twentytwenty\";s:7:\"/themes\";}', 'no'),
+(145, '_site_transient_timeout_community-events-6718ef04d3f46d7f6ff6aabe77f33591', '1602195014', 'no'),
+(146, '_site_transient_community-events-6718ef04d3f46d7f6ff6aabe77f33591', 'a:4:{s:9:\"sandboxed\";b:0;s:5:\"error\";N;s:8:\"location\";a:1:{s:2:\"ip\";s:10:\"172.18.0.0\";}s:6:\"events\";a:2:{i:0;a:10:{s:4:\"type\";s:6:\"meetup\";s:5:\"title\";s:72:\"Discussion Group: Online Stage Presence for speaking at WordPress events\";s:3:\"url\";s:68:\"https://www.meetup.com/learn-wordpress-discussions/events/273494869/\";s:6:\"meetup\";s:27:\"Learn WordPress Discussions\";s:10:\"meetup_url\";s:51:\"https://www.meetup.com/learn-wordpress-discussions/\";s:4:\"date\";s:19:\"2020-10-08 10:00:00\";s:8:\"end_date\";s:19:\"2020-10-08 11:00:00\";s:20:\"start_unix_timestamp\";i:1602176400;s:18:\"end_unix_timestamp\";i:1602180000;s:8:\"location\";a:4:{s:8:\"location\";s:6:\"Online\";s:7:\"country\";s:2:\"US\";s:8:\"latitude\";d:37.779998779297;s:9:\"longitude\";d:-122.41999816895;}}i:1;a:10:{s:4:\"type\";s:8:\"wordcamp\";s:5:\"title\";s:19:\"WordCamp Austin, TX\";s:3:\"url\";s:33:\"https://austin.wordcamp.org/2020/\";s:6:\"meetup\";N;s:10:\"meetup_url\";N;s:4:\"date\";s:19:\"2020-10-09 08:45:00\";s:8:\"end_date\";s:19:\"2020-10-09 08:45:00\";s:20:\"start_unix_timestamp\";i:1602251100;s:18:\"end_unix_timestamp\";i:1602251100;s:8:\"location\";a:4:{s:8:\"location\";s:6:\"Online\";s:7:\"country\";s:2:\"US\";s:8:\"latitude\";d:30.267153;s:9:\"longitude\";d:-97.7430608;}}}}', 'no'),
+(147, '_transient_timeout_dash_v2_88ae138922fe95674369b1cb3d215a2b', '1602194885', 'no'),
+(148, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class=\"rss-widget\"><p><strong>RSS Error:</strong> XML or PCRE extensions not loaded!</p></div><div class=\"rss-widget\"><p><strong>RSS Error:</strong> XML or PCRE extensions not loaded!</p></div>', 'no');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_postmeta`
+-- Table structure for table `wp_postmeta`
 --
 
 CREATE TABLE `wp_postmeta` (
@@ -256,13 +258,13 @@ CREATE TABLE `wp_postmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `wp_postmeta`
+-- Dumping data for table `wp_postmeta`
 --
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (1, 2, '_wp_page_template', 'default'),
 (2, 3, '_wp_page_template', 'default'),
-(3, 1, '_edit_lock', '1601639890:1'),
+(3, 1, '_edit_lock', '1602151709:4'),
 (4, 6, '_wp_attached_file', '2020/10/wallpaper.png'),
 (5, 6, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:300;s:6:\"height\";i:300;s:4:\"file\";s:21:\"2020/10/wallpaper.png\";s:5:\"sizes\";a:1:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:21:\"wallpaper-150x150.png\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:9:\"image/png\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
 (6, 7, '_wp_attached_file', '2020/10/wallpaper-1.png'),
@@ -278,7 +280,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_posts`
+-- Table structure for table `wp_posts`
 --
 
 CREATE TABLE `wp_posts` (
@@ -308,26 +310,27 @@ CREATE TABLE `wp_posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `wp_posts`
+-- Dumping data for table `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
-(1, 1, '2020-10-02 11:47:52', '2020-10-02 11:47:52', '<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\"><strong>Welcome to WordPress.</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:image {\"align\":\"wide\",\"id\":7,\"sizeSlug\":\"full\",\"className\":\"is-style-default\"} -->\n<figure class=\"wp-block-image alignwide size-full is-style-default\"><img src=\"http://172.17.0.4:5050/wp-content/uploads/2020/10/wallpaper-1.png\" alt=\"sry, i ave to more litle arms\" class=\"wp-image-7\" title=\"\"/></figure>\n<!-- /wp:image -->', 'Ft Services', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2020-10-02 12:00:32', '2020-10-02 12:00:32', '', 0, 'http://172.17.0.4:5050/?p=1', 0, 'post', '', 1),
-(2, 1, '2020-10-02 11:47:52', '2020-10-02 11:47:52', '<!-- wp:paragraph -->\n<p>This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin\' caught in the rain.)</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>...or something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>As a new WordPress user, you should go to <a href=\"http://172.17.0.4:5050/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>\n<!-- /wp:paragraph -->', 'Sample Page', '', 'publish', 'closed', 'open', '', 'sample-page', '', '', '2020-10-02 11:47:52', '2020-10-02 11:47:52', '', 0, 'http://172.17.0.4:5050/?page_id=2', 0, 'page', '', 0),
-(3, 1, '2020-10-02 11:47:52', '2020-10-02 11:47:52', '<!-- wp:heading --><h2>Who we are</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Our website address is: http://172.17.0.4:5050.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What personal data we collect and why we collect it</h2><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Comments</h3><!-- /wp:heading --><!-- wp:paragraph --><p>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor&#8217;s IP address and browser user agent string to help spam detection.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Media</h3><!-- /wp:heading --><!-- wp:paragraph --><p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Contact forms</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Cookies</h3><!-- /wp:heading --><!-- wp:paragraph --><p>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Embedded content from other websites</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Analytics</h3><!-- /wp:heading --><!-- wp:heading --><h2>Who we share your data with</h2><!-- /wp:heading --><!-- wp:heading --><h2>How long we retain your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What rights you have over your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Where we send your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Visitor comments may be checked through an automated spam detection service.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Your contact information</h2><!-- /wp:heading --><!-- wp:heading --><h2>Additional information</h2><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>How we protect your data</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>What data breach procedures we have in place</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>What third parties we receive data from</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>What automated decision making and/or profiling we do with user data</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Industry regulatory disclosure requirements</h3><!-- /wp:heading -->', 'Privacy Policy', '', 'draft', 'closed', 'open', '', 'privacy-policy', '', '', '2020-10-02 11:47:52', '2020-10-02 11:47:52', '', 0, 'http://172.17.0.4:5050/?page_id=3', 0, 'page', '', 0),
-(4, 1, '2020-10-02 11:48:16', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2020-10-02 11:48:16', '0000-00-00 00:00:00', '', 0, 'http://172.17.0.4:5050/?p=4', 0, 'post', '', 0),
-(5, 1, '2020-10-02 11:55:29', '2020-10-02 11:55:29', '<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\"><strong>Welcome to WordPress.</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:image {\"align\":\"center\",\"id\":7,\"width\":609,\"height\":609,\"sizeSlug\":\"large\",\"className\":\"is-style-default\"} -->\n<div class=\"wp-block-image is-style-default\"><figure class=\"aligncenter size-large is-resized\"><img src=\"http://172.17.0.4:5050/wp-content/uploads/2020/10/wallpaper-1.png\" alt=\"\" class=\"wp-image-7\" width=\"609\" height=\"609\"/></figure></div>\n<!-- /wp:image -->', 'Ft Services', '', 'inherit', 'closed', 'closed', '', '1-autosave-v1', '', '', '2020-10-02 11:55:29', '2020-10-02 11:55:29', '', 1, 'http://172.17.0.4:5050/?p=5', 0, 'revision', '', 0),
-(6, 1, '2020-10-02 11:50:31', '2020-10-02 11:50:31', '', 'wallpaper', '', 'inherit', 'open', 'closed', '', 'wallpaper', '', '', '2020-10-02 11:50:31', '2020-10-02 11:50:31', '', 1, 'http://172.17.0.4:5050/wp-content/uploads/2020/10/wallpaper.png', 0, 'attachment', 'image/png', 0),
-(7, 1, '2020-10-02 11:51:10', '2020-10-02 11:51:10', '', 'wallpaper-1', '', 'inherit', 'open', 'closed', '', 'wallpaper-1', '', '', '2020-10-02 11:51:10', '2020-10-02 11:51:10', '', 1, 'http://172.17.0.4:5050/wp-content/uploads/2020/10/wallpaper-1.png', 0, 'attachment', 'image/png', 0),
-(8, 1, '2020-10-02 12:00:32', '2020-10-02 12:00:32', '<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\"><strong>Welcome to WordPress.</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:image {\"align\":\"wide\",\"id\":7,\"sizeSlug\":\"full\",\"className\":\"is-style-default\"} -->\n<figure class=\"wp-block-image alignwide size-full is-style-default\"><img src=\"http://172.17.0.4:5050/wp-content/uploads/2020/10/wallpaper-1.png\" alt=\"sry, i ave to more litle arms\" class=\"wp-image-7\" title=\"\"/></figure>\n<!-- /wp:image -->', 'Ft Services', '', 'inherit', 'closed', 'closed', '', '1-revision-v1', '', '', '2020-10-02 12:00:32', '2020-10-02 12:00:32', '', 1, 'http://172.17.0.4:5050/?p=8', 0, 'revision', '', 0),
-(9, 1, '2020-10-06 06:56:39', '2020-10-06 06:56:39', '<!-- wp:paragraph -->\n<p>Hey if you want to help there is my IBAN : </p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><strong>                  FR76 1627 5006 0004 0660 4640 496</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>                                              or my PayPal :</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><strong>                  <a href=\"http://paypal.me/lucasdutriez\" data-type=\"URL\" data-id=\"paypal.me/lucasdutriez\">paypal.me/lucasdutriez</a></strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:image {\"align\":\"center\",\"id\":10,\"sizeSlug\":\"large\"} -->\n<div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><img src=\"http://172.17.0.4:5050/wp-content/uploads/2020/10/Screenshot_20201006-0852012.png\" alt=\"\" class=\"wp-image-10\"/></figure></div>\n<!-- /wp:image -->', 'Help me', '', 'publish', 'open', 'open', '', 'help-me', '', '', '2020-10-06 06:56:39', '2020-10-06 06:56:39', '', 0, 'http://172.17.0.4:5050/?p=9', 0, 'post', '', 0),
-(10, 1, '2020-10-06 06:55:05', '2020-10-06 06:55:05', '', 'Screenshot_20201006-0852012', '', 'inherit', 'open', 'closed', '', 'screenshot_20201006-0852012', '', '', '2020-10-06 06:55:05', '2020-10-06 06:55:05', '', 9, 'http://172.17.0.4:5050/wp-content/uploads/2020/10/Screenshot_20201006-0852012.png', 0, 'attachment', 'image/png', 0),
-(11, 1, '2020-10-06 06:55:42', '2020-10-06 06:55:42', '<!-- wp:paragraph -->\n<p>Hey if you want to help there is my IBAN : </p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><strong>                  FR76 1627 5006 0004 0660 4640 496</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>                                              or my PayPal :</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><strong>                  <a href=\"http://paypal.me/lucasdutriez\" data-type=\"URL\" data-id=\"paypal.me/lucasdutriez\">paypal.me/lucasdutriez</a></strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:image {\"align\":\"center\",\"id\":10,\"sizeSlug\":\"large\"} -->\n<div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><img src=\"http://172.17.0.4:5050/wp-content/uploads/2020/10/Screenshot_20201006-0852012.png\" alt=\"\" class=\"wp-image-10\"/></figure></div>\n<!-- /wp:image -->', 'Help me', '', 'inherit', 'closed', 'closed', '', '9-revision-v1', '', '', '2020-10-06 06:55:42', '2020-10-06 06:55:42', '', 9, 'http://172.17.0.4:5050/?p=11', 0, 'revision', '', 0);
+(1, 4, '2020-10-02 11:47:52', '2020-10-02 11:47:52', '<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\"><strong>Welcome to WordPress.</strong></p>\n<!-- /wp:paragraph -->', 'Ft Services', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2020-10-08 10:10:53', '2020-10-08 10:10:53', '', 0, 'http://172.17.0.4:5050/?p=1', 0, 'post', '', 1),
+(2, 4, '2020-10-02 11:47:52', '2020-10-02 11:47:52', '<!-- wp:paragraph -->\n<p>This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin\' caught in the rain.)</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>...or something like this:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>As a new WordPress user, you should go to <a href=\"http://172.17.0.4:5050/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>\n<!-- /wp:paragraph -->', 'Sample Page', '', 'publish', 'closed', 'open', '', 'sample-page', '', '', '2020-10-02 11:47:52', '2020-10-02 11:47:52', '', 0, 'http://172.17.0.4:5050/?page_id=2', 0, 'page', '', 0),
+(3, 4, '2020-10-02 11:47:52', '2020-10-02 11:47:52', '<!-- wp:heading --><h2>Who we are</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Our website address is: http://172.17.0.4:5050.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What personal data we collect and why we collect it</h2><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Comments</h3><!-- /wp:heading --><!-- wp:paragraph --><p>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor&#8217;s IP address and browser user agent string to help spam detection.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Media</h3><!-- /wp:heading --><!-- wp:paragraph --><p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Contact forms</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Cookies</h3><!-- /wp:heading --><!-- wp:paragraph --><p>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Embedded content from other websites</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Analytics</h3><!-- /wp:heading --><!-- wp:heading --><h2>Who we share your data with</h2><!-- /wp:heading --><!-- wp:heading --><h2>How long we retain your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>What rights you have over your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Where we send your data</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Visitor comments may be checked through an automated spam detection service.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Your contact information</h2><!-- /wp:heading --><!-- wp:heading --><h2>Additional information</h2><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>How we protect your data</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>What data breach procedures we have in place</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>What third parties we receive data from</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>What automated decision making and/or profiling we do with user data</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Industry regulatory disclosure requirements</h3><!-- /wp:heading -->', 'Privacy Policy', '', 'draft', 'closed', 'open', '', 'privacy-policy', '', '', '2020-10-02 11:47:52', '2020-10-02 11:47:52', '', 0, 'http://172.17.0.4:5050/?page_id=3', 0, 'page', '', 0),
+(4, 4, '2020-10-02 11:48:16', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2020-10-02 11:48:16', '0000-00-00 00:00:00', '', 0, 'http://172.17.0.4:5050/?p=4', 0, 'post', '', 0),
+(6, 4, '2020-10-02 11:50:31', '2020-10-02 11:50:31', '', 'wallpaper', '', 'inherit', 'open', 'closed', '', 'wallpaper', '', '', '2020-10-02 11:50:31', '2020-10-02 11:50:31', '', 1, 'http://172.17.0.4:5050/wp-content/uploads/2020/10/wallpaper.png', 0, 'attachment', 'image/png', 0),
+(7, 4, '2020-10-02 11:51:10', '2020-10-02 11:51:10', '', 'wallpaper-1', '', 'inherit', 'open', 'closed', '', 'wallpaper-1', '', '', '2020-10-02 11:51:10', '2020-10-02 11:51:10', '', 1, 'http://172.17.0.4:5050/wp-content/uploads/2020/10/wallpaper-1.png', 0, 'attachment', 'image/png', 0),
+(8, 4, '2020-10-02 12:00:32', '2020-10-02 12:00:32', '<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\"><strong>Welcome to WordPress.</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:image {\"align\":\"wide\",\"id\":7,\"sizeSlug\":\"full\",\"className\":\"is-style-default\"} -->\n<figure class=\"wp-block-image alignwide size-full is-style-default\"><img src=\"http://172.17.0.4:5050/wp-content/uploads/2020/10/wallpaper-1.png\" alt=\"sry, i ave to more litle arms\" class=\"wp-image-7\" title=\"\"/></figure>\n<!-- /wp:image -->', 'Ft Services', '', 'inherit', 'closed', 'closed', '', '1-revision-v1', '', '', '2020-10-02 12:00:32', '2020-10-02 12:00:32', '', 1, 'http://172.17.0.4:5050/?p=8', 0, 'revision', '', 0),
+(9, 4, '2020-10-06 06:56:39', '2020-10-06 06:56:39', '<!-- wp:paragraph -->\n<p>Hey if you want to help there is my IBAN : </p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><strong>                  FR76 1627 5006 0004 0660 4640 496</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>                                              or my PayPal :</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><strong>                  <a href=\"http://paypal.me/lucasdutriez\" data-type=\"URL\" data-id=\"paypal.me/lucasdutriez\">paypal.me/lucasdutriez</a></strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:image {\"align\":\"center\",\"id\":10,\"sizeSlug\":\"large\"} -->\n<div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><img src=\"http://172.17.0.4:5050/wp-content/uploads/2020/10/Screenshot_20201006-0852012.png\" alt=\"\" class=\"wp-image-10\"/></figure></div>\n<!-- /wp:image -->', 'Help me', '', 'publish', 'open', 'open', '', 'help-me', '', '', '2020-10-06 06:56:39', '2020-10-06 06:56:39', '', 0, 'http://172.17.0.4:5050/?p=9', 0, 'post', '', 0),
+(10, 4, '2020-10-06 06:55:05', '2020-10-06 06:55:05', '', 'Screenshot_20201006-0852012', '', 'inherit', 'open', 'closed', '', 'screenshot_20201006-0852012', '', '', '2020-10-06 06:55:05', '2020-10-06 06:55:05', '', 9, 'http://172.17.0.4:5050/wp-content/uploads/2020/10/Screenshot_20201006-0852012.png', 0, 'attachment', 'image/png', 0),
+(11, 4, '2020-10-06 06:55:42', '2020-10-06 06:55:42', '<!-- wp:paragraph -->\n<p>Hey if you want to help there is my IBAN : </p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><strong>                  FR76 1627 5006 0004 0660 4640 496</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>                                              or my PayPal :</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p><strong>                  <a href=\"http://paypal.me/lucasdutriez\" data-type=\"URL\" data-id=\"paypal.me/lucasdutriez\">paypal.me/lucasdutriez</a></strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:image {\"align\":\"center\",\"id\":10,\"sizeSlug\":\"large\"} -->\n<div class=\"wp-block-image\"><figure class=\"aligncenter size-large\"><img src=\"http://172.17.0.4:5050/wp-content/uploads/2020/10/Screenshot_20201006-0852012.png\" alt=\"\" class=\"wp-image-10\"/></figure></div>\n<!-- /wp:image -->', 'Help me', '', 'inherit', 'closed', 'closed', '', '9-revision-v1', '', '', '2020-10-06 06:55:42', '2020-10-06 06:55:42', '', 9, 'http://172.17.0.4:5050/?p=11', 0, 'revision', '', 0),
+(12, 4, '2020-10-08 10:10:13', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2020-10-08 10:10:13', '0000-00-00 00:00:00', '', 0, 'http://172.17.0.4:5050/?p=12', 0, 'post', '', 0),
+(13, 4, '2020-10-08 10:10:53', '2020-10-08 10:10:53', '<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\"><strong>Welcome to WordPress.</strong></p>\n<!-- /wp:paragraph -->', 'Ft Services', '', 'inherit', 'closed', 'closed', '', '1-revision-v1', '', '', '2020-10-08 10:10:53', '2020-10-08 10:10:53', '', 1, 'http://172.17.0.4:5050/?p=13', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_termmeta`
+-- Table structure for table `wp_termmeta`
 --
 
 CREATE TABLE `wp_termmeta` (
@@ -340,7 +343,7 @@ CREATE TABLE `wp_termmeta` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_terms`
+-- Table structure for table `wp_terms`
 --
 
 CREATE TABLE `wp_terms` (
@@ -351,7 +354,7 @@ CREATE TABLE `wp_terms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `wp_terms`
+-- Dumping data for table `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
@@ -360,7 +363,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_term_relationships`
+-- Table structure for table `wp_term_relationships`
 --
 
 CREATE TABLE `wp_term_relationships` (
@@ -370,7 +373,7 @@ CREATE TABLE `wp_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `wp_term_relationships`
+-- Dumping data for table `wp_term_relationships`
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -380,7 +383,7 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_term_taxonomy`
+-- Table structure for table `wp_term_taxonomy`
 --
 
 CREATE TABLE `wp_term_taxonomy` (
@@ -393,7 +396,7 @@ CREATE TABLE `wp_term_taxonomy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `wp_term_taxonomy`
+-- Dumping data for table `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
@@ -402,7 +405,7 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_usermeta`
+-- Table structure for table `wp_usermeta`
 --
 
 CREATE TABLE `wp_usermeta` (
@@ -413,29 +416,10 @@ CREATE TABLE `wp_usermeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `wp_usermeta`
+-- Dumping data for table `wp_usermeta`
 --
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
-(1, 1, 'nickname', 'root'),
-(2, 1, 'first_name', ''),
-(3, 1, 'last_name', ''),
-(4, 1, 'description', ''),
-(5, 1, 'rich_editing', 'true'),
-(6, 1, 'syntax_highlighting', 'true'),
-(7, 1, 'comment_shortcuts', 'false'),
-(8, 1, 'admin_color', 'fresh'),
-(9, 1, 'use_ssl', '0'),
-(10, 1, 'show_admin_bar_front', 'true'),
-(11, 1, 'locale', ''),
-(12, 1, 'wp_capabilities', 'a:1:{s:13:\"administrator\";b:1;}'),
-(13, 1, 'wp_user_level', '10'),
-(14, 1, 'dismissed_wp_pointers', ''),
-(15, 1, 'show_welcome_panel', '1'),
-(17, 1, 'wp_dashboard_quick_press_last_post_id', '4'),
-(18, 1, 'community-events-location', 'a:1:{s:2:\"ip\";s:10:\"172.18.0.0\";}'),
-(19, 1, 'wp_user-settings', 'libraryContent=browse'),
-(20, 1, 'wp_user-settings-time', '1601640030'),
 (21, 2, 'nickname', 'chdespon'),
 (22, 2, 'first_name', ''),
 (23, 2, 'last_name', ''),
@@ -465,12 +449,29 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (47, 3, 'wp_user_level', '0'),
 (48, 3, 'dismissed_wp_pointers', ''),
 (49, 3, 'session_tokens', 'a:1:{s:64:\"61d53b1162e01f2f2e08319f416788291dfa47ec6d5273f7185418c7c047856c\";a:4:{s:10:\"expiration\";i:1602140257;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:76:\"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:81.0) Gecko/20100101 Firefox/81.0\";s:5:\"login\";i:1601967457;}}'),
-(50, 3, 'community-events-location', 'a:1:{s:2:\"ip\";s:10:\"172.18.0.0\";}');
+(50, 3, 'community-events-location', 'a:1:{s:2:\"ip\";s:10:\"172.18.0.0\";}'),
+(52, 4, 'nickname', 'admin'),
+(53, 4, 'first_name', ''),
+(54, 4, 'last_name', ''),
+(55, 4, 'description', ''),
+(56, 4, 'rich_editing', 'true'),
+(57, 4, 'syntax_highlighting', 'true'),
+(58, 4, 'comment_shortcuts', 'false'),
+(59, 4, 'admin_color', 'fresh'),
+(60, 4, 'use_ssl', '0'),
+(61, 4, 'show_admin_bar_front', 'true'),
+(62, 4, 'locale', ''),
+(63, 4, 'wp_capabilities', 'a:1:{s:13:\"administrator\";b:1;}'),
+(64, 4, 'wp_user_level', '10'),
+(65, 4, 'dismissed_wp_pointers', ''),
+(66, 4, 'session_tokens', 'a:1:{s:64:\"58463f876e64ab844ee4d5e3f6f50a0b939e8f56fe24fc127d860fb46af6f9cc\";a:4:{s:10:\"expiration\";i:1602324613;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:76:\"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:81.0) Gecko/20100101 Firefox/81.0\";s:5:\"login\";i:1602151813;}}'),
+(67, 4, 'wp_dashboard_quick_press_last_post_id', '12'),
+(68, 4, 'community-events-location', 'a:1:{s:2:\"ip\";s:10:\"172.18.0.0\";}');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_users`
+-- Table structure for table `wp_users`
 --
 
 CREATE TABLE `wp_users` (
@@ -487,20 +488,20 @@ CREATE TABLE `wp_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `wp_users`
+-- Dumping data for table `wp_users`
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
-(1, 'root', '$P$BwdTtagCp66eaEJPdeHNVWbc7d6a2u/', 'root', 'root.password@leFUTUR.fr', 'http://172.17.0.4:5050', '2020-10-02 11:47:52', '', 0, 'root'),
 (2, 'chdespon', '$P$BELPWR639opJOtKViKx8Sfws8k43Kh1', 'chdespon', 'chdespon@student.42.fr', '', '2020-10-02 12:09:00', '1601640540:$P$BngkxNxWQ4fyKEilbEElwdg8xUDvdn/', 0, 'chdespon'),
-(3, 'ncoudsi', '$P$B1Hj6kO4EMtJGfsBpawfZXEwiboLCO1', 'ncoudsi', 'ncoudsi@student.42.fr', '', '2020-10-02 12:09:38', '1601640578:$P$BqGNNrASKaiw.bsFYkkH1QUwYb3/O2/', 0, 'ncoudsi');
+(3, 'ncoudsi', '$P$B1Hj6kO4EMtJGfsBpawfZXEwiboLCO1', 'ncoudsi', 'ncoudsi@student.42.fr', '', '2020-10-02 12:09:38', '1601640578:$P$BqGNNrASKaiw.bsFYkkH1QUwYb3/O2/', 0, 'ncoudsi'),
+(4, 'admin', '$P$BvbsyTlkDbnLn8IBqugK7R9dJZN6/6/', 'admin', 'admin.password@email.com', 'http://172.17.0.4:5050', '2020-10-08 10:09:54', '1602151796:$P$BvlJvpPlIeX7OhDape6xCBScWXOnmu/', 0, 'admin');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `wp_commentmeta`
+-- Indexes for table `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -508,7 +509,7 @@ ALTER TABLE `wp_commentmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Index pour la table `wp_comments`
+-- Indexes for table `wp_comments`
 --
 ALTER TABLE `wp_comments`
   ADD PRIMARY KEY (`comment_ID`),
@@ -519,14 +520,14 @@ ALTER TABLE `wp_comments`
   ADD KEY `comment_author_email` (`comment_author_email`(10));
 
 --
--- Index pour la table `wp_links`
+-- Indexes for table `wp_links`
 --
 ALTER TABLE `wp_links`
   ADD PRIMARY KEY (`link_id`),
   ADD KEY `link_visible` (`link_visible`);
 
 --
--- Index pour la table `wp_options`
+-- Indexes for table `wp_options`
 --
 ALTER TABLE `wp_options`
   ADD PRIMARY KEY (`option_id`),
@@ -534,7 +535,7 @@ ALTER TABLE `wp_options`
   ADD KEY `autoload` (`autoload`);
 
 --
--- Index pour la table `wp_postmeta`
+-- Indexes for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -542,7 +543,7 @@ ALTER TABLE `wp_postmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Index pour la table `wp_posts`
+-- Indexes for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
   ADD PRIMARY KEY (`ID`),
@@ -552,7 +553,7 @@ ALTER TABLE `wp_posts`
   ADD KEY `post_author` (`post_author`);
 
 --
--- Index pour la table `wp_termmeta`
+-- Indexes for table `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -560,7 +561,7 @@ ALTER TABLE `wp_termmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Index pour la table `wp_terms`
+-- Indexes for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
   ADD PRIMARY KEY (`term_id`),
@@ -568,14 +569,14 @@ ALTER TABLE `wp_terms`
   ADD KEY `name` (`name`(191));
 
 --
--- Index pour la table `wp_term_relationships`
+-- Indexes for table `wp_term_relationships`
 --
 ALTER TABLE `wp_term_relationships`
   ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
 
 --
--- Index pour la table `wp_term_taxonomy`
+-- Indexes for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   ADD PRIMARY KEY (`term_taxonomy_id`),
@@ -583,7 +584,7 @@ ALTER TABLE `wp_term_taxonomy`
   ADD KEY `taxonomy` (`taxonomy`);
 
 --
--- Index pour la table `wp_usermeta`
+-- Indexes for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
   ADD PRIMARY KEY (`umeta_id`),
@@ -591,7 +592,7 @@ ALTER TABLE `wp_usermeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Index pour la table `wp_users`
+-- Indexes for table `wp_users`
 --
 ALTER TABLE `wp_users`
   ADD PRIMARY KEY (`ID`),
@@ -600,74 +601,74 @@ ALTER TABLE `wp_users`
   ADD KEY `user_email` (`user_email`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `wp_commentmeta`
+-- AUTO_INCREMENT for table `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `wp_comments`
+-- AUTO_INCREMENT for table `wp_comments`
 --
 ALTER TABLE `wp_comments`
   MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `wp_links`
+-- AUTO_INCREMENT for table `wp_links`
 --
 ALTER TABLE `wp_links`
   MODIFY `link_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `wp_options`
+-- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
 
 --
--- AUTO_INCREMENT pour la table `wp_postmeta`
+-- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT pour la table `wp_posts`
+-- AUTO_INCREMENT for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT pour la table `wp_termmeta`
+-- AUTO_INCREMENT for table `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `wp_terms`
+-- AUTO_INCREMENT for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
   MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `wp_term_taxonomy`
+-- AUTO_INCREMENT for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `wp_usermeta`
+-- AUTO_INCREMENT for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
-  MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
--- AUTO_INCREMENT pour la table `wp_users`
+-- AUTO_INCREMENT for table `wp_users`
 --
 ALTER TABLE `wp_users`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

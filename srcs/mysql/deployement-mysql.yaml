@@ -1,21 +1,20 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mysql-pv-claim
-  namespace: default
+  name: mysql
   labels:
-    app: mysql-pv-claim
+    app: mysql
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 500Mi
+      storage: 2Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql-deployment
+  name: mysql
   labels:
     app: mysql
 spec:
@@ -34,12 +33,12 @@ spec:
         ports:
         - containerPort: 3306
         volumeMounts:
-          - mountPath: /srcs/mysql-persistent-volume
-            name: mysql-persistent-volume
+          - mountPath: /var/lib/mysql
+            name: mysql
       volumes:
-       - name: mysql-persistent-volume
+       - name: mysql
          persistentVolumeClaim:
-          claimName: mysql-pv-claim
+          claimName: mysql
 ---
 apiVersion: v1
 kind: Service

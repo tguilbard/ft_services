@@ -1,21 +1,20 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: influxdb-pv-claim
-  namespace: default
+  name: influxdb
   labels:
-    app: influxdb-pv-claim
+    app: influxdb
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 2Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: influxdb-deployment
+  name: influxdb
   labels:
     app: influxdb
 spec:
@@ -34,12 +33,12 @@ spec:
         ports:
         - containerPort: 8086
         volumeMounts:
-          - mountPath: /srcs/influxdb-persistent-volume
-            name: influxdb-persistent-volume
+          - mountPath: /var/lib/influxdb
+            name: influxdb
       volumes:
-       - name: influxdb-persistent-volume
+       - name: influxdb
          persistentVolumeClaim:
-          claimName: influxdb-pv-claim
+          claimName: influxdb
 ---
 apiVersion: v1
 kind: Service
