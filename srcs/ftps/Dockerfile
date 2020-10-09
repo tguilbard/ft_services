@@ -1,17 +1,11 @@
 FROM alpine:latest
 
-RUN apk update
-RUN apk add openrc --no-cache
-RUN apk add telegraf --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted --no-cache
-RUN apk add pure-ftpd --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted --no-cache
+RUN apk update \
+&& apk add vsftpd && apk add openssl openrc --no-cache
+RUN apk add telegraf pure-ftpd --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted --no-cache
 
-RUN { echo "password"; echo "password"; } | adduser admin
-
-ADD ./setup.sh		./srcs/setup.sh
-RUN chmod +x ./srcs/setup.sh
-
-RUN mkdir -p /etc/telegraf
-COPY ./telegraf.conf /etc/telegraf/telegraf.conf
+ADD setup.sh /srcs/setup.sh
+ADD telegraf.conf /etc/telegraf/telegraf.conf
 
 EXPOSE 21 21000
 
