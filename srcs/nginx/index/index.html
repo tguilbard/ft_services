@@ -32,29 +32,6 @@
 			font-size: 140%;
 		}
 
-		/* THIS PART MANAGE THE LINK TO THE SUBJECT */
-		.subject {
-			border: 6px ridge purple;
-			padding: 15px;
-			position: absolute;
-			top: 75%;
-			left: 43.75%;
-			right: 43.75%;
-			background-color: rgba(0, 255, 255, 0.6);
-		}
-
-		.subject h2 {
-			text-align: center;
-			position: relative;
-			top: -20%;
-		}
-
-		.subject form {
-			text-align: center;
-			position: relative;
-			top: -25%;
-		}
-
 		/* THIS PART MANAGE THE NGINX PANEL*/
 		.nginx {
 			border: 6px ridge purple;
@@ -79,7 +56,7 @@
 		}
 
 		/* THIS PART MANAGE THE WORDPRESS PANEL*/
-		.kube_dashboard {
+		.subject {
 			border: 6px ridge purple;
 			padding: 15px;
 			position: absolute;
@@ -89,13 +66,13 @@
 			background-color: rgba(0, 255, 255, 0.6);
 		}
 
-		.kube_dashboard h2 {
+		.subject h2 {
 			text-align: center;
 			position: relative;
 			top: -20%;
 		}
 
-		.kube_dashboard form {
+		.subject form {
 			text-align: center;
 			position: relative;
 			top: -25%;
@@ -178,14 +155,6 @@
 		<br>
 		<form action="http://172.17.0.5:5000" target="_blank">
 			<input type="submit" value="phpMyAdmin" />
-		</form>
-	</div>
-
-	<div class="kube_dashboard">
-		<h2> KUBERNETES </h2>
-		<form
-			action="http://172.0.0.1:37415/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default" target="_blank">
-			<input type="submit" value="Dashboard" />
 		</form>
 	</div>
 
