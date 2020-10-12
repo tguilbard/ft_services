@@ -25,6 +25,8 @@ spec:
   kind: Service
   metadata:
     name: phpmyadmin-service
+    annotations:
+      metallb.universe.tf/allow-shared-ip: ekvm
   spec:
     type: LoadBalancer
     ports:
