@@ -5,6 +5,8 @@ RUN apk update && apk add openrc \
 RUN apk add telegraf --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted --no-cache
 
 ADD nginx.conf /etc/nginx/nginx.conf
+ADD livenessprobe.sh livenessprobe.sh
+RUN chmod +x livenessprobe.sh
 ADD setup.sh setup.sh
 RUN chmod +x setup.sh
 RUN mkdir www
