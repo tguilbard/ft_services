@@ -1,22 +1,24 @@
 #!/bin/bash
 
 services="nginx ftps wordpress phpmyadmin mysql influxdb grafana"
-GREEN="\e[32m\e[1m"
+GREEN="\e[1;32m"
+YELLOW="\e[1;33m"
 DEFAULT="\e[0m"
 ft_set_service()
 {
 	for service in $services
 	do
-		echo -e "${GREEN}Building $service${DEFAULT}"
-		docker build -t image-$service srcs/$service | grep Step
+		echo -en "${YELLOW}Building $service...${DEFAULT}"
+		docker build -t image-$service srcs/$service > log
 	    kubectl apply -f srcs/$service/deployement-$service.yaml > /dev/null
-		echo -e "${GREEN}$service is set${DEFAULT}"
+		echo -e "${GREEN}DONE${DEFAULT}"
 	done
 }
 
 # ================================================================
 
-echo -en "\e[35m"; minikube start --driver=docker --cpus=2 --memory=2200 --extra-config=apiserver.service-node-port-range=1-35000
+> log
+echo -en "\e[37m"; minikube start --driver=docker --cpus=2 --memory=2200 --extra-config=apiserver.service-node-port-range=1-35000
 if [[ $? == 0 ]]
 then
 	eval $(minikube docker-env)
@@ -34,6 +36,7 @@ kubectl apply -f srcs/load_balancer/deployement-metallb.yaml > /dev/null
 echo -e "${GREEN}Mettallb installed${DEFAULT}"
 
 # ======================================================
+
 ft_set_service
 
 echo -en "\e[35m"; minikube dashboard
