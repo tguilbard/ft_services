@@ -14,7 +14,7 @@ $cfg['Servers'][$i]['compress'] = false;
 // $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
 $cfg['PmaAbsoluteUri'] = './';
-
+$cfg['AllowThirdPartyFraming'] = true;
 /**
  * Variable definition
  */
